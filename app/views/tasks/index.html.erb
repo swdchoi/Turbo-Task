@@ -1,17 +1,65 @@
 <p style="color: green"><%= notice %></p>
 
 <% content_for :title, "Tasks" %>
-
-<h1>Tasks</h1>
-<%= link_to "New task", new_task_path, data: {turbo_frame: dom_id(Task.new)} %>
-
+<div class="mx-auto d-flex flex-column align-items-center justify-content-center m-3">
+<h1>DAILY TASKS</h1>
+<%= link_to "New task", new_task_path, data: {turbo_frame: dom_id(Task.new)}, class:"btn btn-primary" %>
 <%= turbo_frame_tag Task.new do %>
 <% end %>
-
-<div id="tasks">
-    <%= render @tasks %>
 </div>
-<h1> Completed</h1>
-<div id="completedtasks">
+
+<div class="d-flex flex-align">
+  <div class="w-50 m-5 card">
+    <div class="card-header">
+    <h1 class="text-center m-3">Tasks</h1>
+    </div>
+    <div class="card-body">
+    <div class="container">
+      <div class="row py-4">
+        <div class="col">
+          <h3>Name</h3>
+        </div>
+        <div class="col-4">
+          <h3>Description</h3>
+        </div>
+        <div class="col">
+          <h3>Status</h3>
+        </div>
+        <div class="col">
+          <h3>Edit</h3>
+        </div>
+      </div>
+    </div>
+    <div id="tasks">
+      <%= render @tasks %>
+    </div>
+  </div>
+  </div>
+
+  <div class="w-50 m-5 card">
+    <div class="card-header">
+    <h1 class="text-center m-3">Completed</h1>
+    </div>
+    <div class="card-body">
+    <div class="container">
+      <div class="row py-4">
+        <div class="col">
+          <h3>Name</h3>
+        </div>
+        <div class="col-4">
+          <h3>Description</h3>
+        </div>
+        <div class="col">
+          <h3>Status</h3>
+        </div>
+        <div class="col">
+          <h3>Edit</h3>
+        </div>
+      </div>
+    </div>
+    <div id="completedtasks">
+    </div>
+  </div>
+</div>
 </div>
 

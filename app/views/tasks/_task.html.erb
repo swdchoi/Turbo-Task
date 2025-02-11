@@ -1,25 +1,25 @@
 <%= turbo_frame_tag task do%>
       <div id="<%= dom_id task %>">
-        <p>
-          <strong>Name:</strong>
+        <div class="row">
+        <div class="col-2 d-flex justify-content-center">
           <%= task.name %>
-        </p>
+        </div>
 
-        <p>
-          <strong>Description:</strong>
+        <div class="col-4 d-flex justify-content-center">
           <%= task.description %>
-        </p>
+        </div>
 
-        <p>
-          <strong>Completed:</strong>
-          <%= task.completed %>
-        </p>
+        <div class="col d-flex justify-content-center">
         <% if task.completed %>
-          <%= button_to "Not Finished?", completed_path(task), method: :put%>
+          <%= button_to "Undo?", completed_path(task), method: :put, class:"btn btn-danger btn-sm m-1"%>
         <% else %>
-          <%= button_to "Completed", completed_path(task), method: :put%>
+          <%= button_to "Completed", completed_path(task), method: :put, class:"btn btn-success btn-sm m-1"%>
         <% end%>
-          <%= link_to "Edit this task", edit_task_path(task) %> |
-          <%= button_to "Destroy this task", task, method: :delete %>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <%= link_to "Edit", edit_task_path(task), class:"btn btn-secondary btn-sm m-1" %>
+          <%= button_to "Remove", task, method: :delete, class:"btn btn-danger btn-sm m-1" %>
+        </div>
+        </div>
       </div>
 <% end %>

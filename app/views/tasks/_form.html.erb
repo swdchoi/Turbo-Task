@@ -12,21 +12,20 @@
   <% end %>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.label :name, style: "display: block", class:"form-label" %>
+    <%= form.text_field :name, class:"form-control" %>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
+    <%= form.label :description, style: "display: block", class:"form-label"  %>
+    <%= form.text_field :description, class:"form-control" %>
   </div>
 
   <div>
-    <%= form.label :completed, style: "display: block" %>
-    <%= form.checkbox :completed %>
+    <%= form.hidden_field :completed, value: false%>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-primary m-1" %>
   </div>
 <% end %>

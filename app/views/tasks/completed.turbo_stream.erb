@@ -1,4 +1,4 @@
-<%= turbo_stream.remove @task %>
+<%= turbo_stream.remove dom_id(@task) %>
 <% if @task.completed %>
 <%= turbo_stream.append "completedtasks" do %>
 <%= render @task%>

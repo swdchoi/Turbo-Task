@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Single Page application using Turbo Stream and Turbo Frames..
 
-Things you may want to cover:
+It is a little confusing but got a better understanding after building this app..
 
-* Ruby version
+Used Boostrap for the front end...
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Very simple task to-do app...
