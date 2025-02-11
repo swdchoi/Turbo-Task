@@ -1,0 +1,13 @@
+<% content_for :title, "Editing task" %>
+
+<h1>Editing task</h1>
+<%= turbo_frame_tag @task do%>
+<%= render "form", task: @task %>
+<%= link_to "Cancel", root_path %>
+<% end %>
+<br>
+
+<div>
+  <%= link_to "Show this task", @task %> |
+  <%= link_to "Back to tasks", tasks_path %>
+</div>

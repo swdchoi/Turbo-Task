@@ -1,0 +1,10 @@
+<%= turbo_stream.remove @task %>
+<% if @task.completed %>
+<%= turbo_stream.append "completedtasks" do %>
+<%= render @task%>
+<% end %>
+<% else %>
+<%= turbo_stream.append "tasks" do %>
+<%= render @task%>
+<% end %>
+<% end %>
